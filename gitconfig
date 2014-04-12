@@ -1,0 +1,18 @@
+[user]
+	name = changhuhuang
+	email = changhuhuang@gmail.com
+[alias]
+	st = status
+	a = add
+	ci = commit
+	rb = rebase
+	l = log --oneline -12
+	ll = log --oneline -12 --graph
+	br = branch
+	sm = submodule
+	smu = submodule update
+	sma = submodule add
+	co = checkout
+
+[color]
+	ui = true
