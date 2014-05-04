@@ -1,18 +1,19 @@
 [user]
-	name = changhuhuang
-	email = changhuhuang@gmail.com
+    name = changhuhuang
+    email = changhuhuang@gmail.com
 [alias]
-	st = status
-	a = add
-	ci = commit
-	rb = rebase
-	l = log --oneline -12
-	ll = log --oneline -12 --graph
-	br = branch
-	sm = submodule
-	smu = submodule update
-	sma = submodule add
-	co = checkout
+    st = status
+    a = add
+    ci = commit
+    rb = rebase
+    l = log --oneline -12 --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cblue(%an)%Creset %Cgreen(%cd)%Creset' --abbrev-commit --date=short
+    lf = log --oneline --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cblue(%an)%Creset %Cgreen(%cd)%Creset' --abbrev-commit --date=short
+    ll = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cblue(%an)%Creset %Cgreen(%cd)%Creset' --abbrev-commit --date=short
+    br = branch
+    sm = submodule
+    smu = submodule update
+    sma = submodule add
+    co = checkout
 
 [color]
-	ui = true
+    ui = true
