@@ -34,6 +34,14 @@ autocmd FileType python setlocal et sta sw=4 sts=4
 :map <space> :CtrlPMRU <cr>
 :map <C-E> :NERDTreeToggle <cr>
 
+"设置自动补全
+"set wildmenu
+"set wildmode=longest:full
+"
+
+"change to current path
+autocmd BufEnter * lcd %:p:h
+
 "plugin to install
 Bundle 'kien/ctrlp.vim'
 Bundle 'Lokaltog/vim-easymotion'
@@ -42,3 +50,4 @@ Bundle 'scrooloose/nerdcommenter'
 Bundle 'mattn/emmet-vim'
 Bundle 'terryma/vim-multiple-cursors'
 Bundle 'mileszs/ack.vim'
+Bundle 'vim-scripts/ZoomWin'
