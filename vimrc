@@ -51,3 +51,7 @@ Bundle 'mattn/emmet-vim'
 Bundle 'terryma/vim-multiple-cursors'
 Bundle 'mileszs/ack.vim'
 Bundle 'vim-scripts/ZoomWin'
+
+"vim-markdown
+Bundle 'godlygeek/tabular'
+Bundle 'plasticboy/vim-markdown'
