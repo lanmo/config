@@ -10,10 +10,10 @@ call vundle#rc()
 
 filetype plugin indent on     " required  
 " To ignore plugin indent changes, instead use:  
-"filetype plugin on
+filetype plugin on
 
 " let Vundle manage Vundle, required  
-Bundle 'gmarik/vundle'  
+"Bundle 'gmarik/vundle'  
 
 
 
@@ -55,3 +55,6 @@ Bundle 'vim-scripts/ZoomWin'
 "vim-markdown
 Bundle 'godlygeek/tabular'
 Bundle 'plasticboy/vim-markdown'
+Bundle 'suan/vim-instant-markdown'
+"let g:instant_markdown_slow = 1
+"let g:instant_markdown_autostart = 0
