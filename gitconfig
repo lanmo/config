@@ -1,6 +1,6 @@
 [user]
-    name = huangchanghu
-    email = changhuhuang@gmail.com
+    name = yangnan3
+    email = yannan3@le.com
 [alias]
     st = status
     a = add
@@ -17,3 +17,5 @@
 
 [color]
     ui = true
+[core]
+	editor = /usr/bin/vim

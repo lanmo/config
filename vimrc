@@ -55,6 +55,39 @@ autocmd FileType python setlocal et sta sw=4 sts=4
 " 禁止PyFlakes使用QuickFix，这样在按下<F7>时会调用flake8，而有对于代码编辑时的错误仍能得到有效的提示
 let g:pyflakes_use_quickfix = 0
 
+" 开启注释模板
+autocmd BufNewFile *.cpp,*.[ch],*.sh,*.java,*.py exec ":call SetTitle()" 
+func SetTitle() 
+    if &filetype == 'sh'
+        call setline(1,"\#########################################################################") 
+        call append(line("."), "\# File Name: ".expand("%")) 
+        call append(line(".")+1, "\# Author: 杨楠") 
+        call append(line(".")+2, "\# mail: xjxyyn@126.com") 
+        call append(line(".")+3, "\# Created Time: ".strftime("%c")) 
+        call append(line(".")+4, "\#########################################################################") 
+        call append(line(".")+5, "\#!/bin/bash") 
+        call append(line(".")+6, "") 
+    else 
+        call setline(1, "/*************************************************************************") 
+        call append(line("."), "    > File Name: ".expand("%")) 
+        call append(line(".")+1, "    > Author: 杨楠") 
+        call append(line(".")+2, "    > Mail: xjxyyn@126.com ") 
+        call append(line(".")+3, "    > Created Time: ".strftime("%c")) 
+        call append(line(".")+4, " ************************************************************************/") 
+        call append(line(".")+5, "")
+    endif
+    if &filetype == 'cpp'
+        call append(line(".")+6, "#include<iostream>")
+        call append(line(".")+7, "using namespace std;")
+        call append(line(".")+8, "")
+    endif
+    if &filetype == 'c'
+        call append(line(".")+6, "#include<stdio.h>")
+        call append(line(".")+7, "")
+    endif
+    autocmd BufNewFile * normal G
+endfunc 
+
 "plugin to install
 Bundle 'kien/ctrlp.vim'
 Bundle 'Lokaltog/vim-easymotion'
@@ -70,7 +103,6 @@ Bundle 'vim-scripts/numbered.vim'
 Bundle 'vim-scripts/AutoComplPop'
 Bundle 'nvie/vim-flake8'
 Bundle 'vim-scripts/pythoncomplete'
-
 
 "vim-markdown
 Bundle 'godlygeek/tabular'
