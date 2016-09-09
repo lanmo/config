@@ -67,8 +67,7 @@ func SetTitle()
         call append(line(".")+4, "\#########################################################################") 
         call append(line(".")+5, "\#!/bin/bash") 
         call append(line(".")+6, "") 
-    endif
-    if &filetype == 'python'
+    elseif &filetype == 'python'
         call setline(1, "\#!/usr/bin/python")
         call append(line("."), "\# coding: utf-8")
         call append(line(".")+1,"\#########################################################################") 
